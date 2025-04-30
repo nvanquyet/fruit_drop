@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab42ed9cd83343ffb55ab0563f059093, type: 3}
+  m_Name: FruitData
+  m_EditorClassIdentifier: 
+  dataArray:
+  - id: 0
+    sizeMultiplier: 0.5
+    scoreClaim: 2
+    mass: 0.5
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: b7481a4c424715542a70ac1efc7468db, type: 3}
+  - id: 1
+    sizeMultiplier: 0.6
+    scoreClaim: 4
+    mass: 0.7
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: a292bddf8693e00428dace4a7f770aa6, type: 3}
+  - id: 2
+    sizeMultiplier: 0.7
+    scoreClaim: 8
+    mass: 0.9
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: 23c39604c54f9f944ac7791b186f3dce, type: 3}
+  - id: 3
+    sizeMultiplier: 0.8
+    scoreClaim: 16
+    mass: 1.1
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: fbb6c45b2e0f5424cace793121f03e56, type: 3}
+  - id: 4
+    sizeMultiplier: 0.9
+    scoreClaim: 32
+    mass: 1.3
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: 5b0c287fddf11b24d910a6b285ee1807, type: 3}
+  - id: 5
+    sizeMultiplier: 1
+    scoreClaim: 64
+    mass: 1.5
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: 50dd2e8acaa7426438d693e39eb73026, type: 3}
+  - id: 6
+    sizeMultiplier: 1.1
+    scoreClaim: 128
+    mass: 1.7
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: 140169fe467b8b649aa2541e0c8d6c09, type: 3}
+  - id: 7
+    sizeMultiplier: 1.2
+    scoreClaim: 256
+    mass: 1.9
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: b7481a4c424715542a70ac1efc7468db, type: 3}
+  - id: 8
+    sizeMultiplier: 1.3
+    scoreClaim: 512
+    mass: 2.1
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: 23c39604c54f9f944ac7791b186f3dce, type: 3}
+  - id: 9
+    sizeMultiplier: 1.4
+    scoreClaim: 1024
+    mass: 2.3
+    visualData:
+      fruitSprite: {fileID: 21300000, guid: 5b0c287fddf11b24d910a6b285ee1807, type: 3}
+  fruitPrefab: {fileID: 1458309189185345228, guid: 0c0d20726f0b38549a207817c4b83980, type: 3}
