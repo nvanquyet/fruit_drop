@@ -1,0 +1,48 @@
+// A* search algorithm
+function A_Star(start, goal):
+    // Initialize sets
+    closedSet = {}                  // Nodes already evaluated
+    openSet = {start}               // Nodes discovered but not evaluated
+    cameFrom = {}                   // Best previous node for each node
+    
+    // Initialize costs
+    gScore = {}                     // Cost from start to node
+    gScore[start] = 0
+    
+    fScore = {}                     // Estimated total cost: g(n) + h(n)
+    fScore[start] = heuristic(start, goal)
+    
+    while openSet is not empty:
+        current = node in openSet with lowest fScore
+        
+        if current = goal:
+            return reconstruct_path(cameFrom, current)
+        
+        remove current from openSet
+        add current to closedSet
+        
+        for each neighbor of current:
+            if neighbor in closedSet:
+                continue            // Skip already evaluated nodes
+            
+            tentative_gScore = gScore[current] + d(current, neighbor)
+            
+            if neighbor not in openSet:
+                add neighbor to openSet
+            else if tentative_gScore >= gScore[neighbor]:
+                continue            // This path is not better
+            
+            // Record the best path so far
+            cameFrom[neighbor] = current
+            gScore[neighbor] = tentative_gScore
+            fScore[neighbor] = gScore[neighbor] + heuristic(neighbor, goal)
+    
+    return failure                  // No path found
+
+// Reconstruct the path from start to goal
+function reconstruct_path(cameFrom, current):
+    total_path = [current]
+    while current in cameFrom:
+        current = cameFrom[current]
+        add current to the beginning of total_path
+    return total_path

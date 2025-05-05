@@ -1,0 +1,36 @@
+1. 	Làm thế nào để các quả lăn nhiều hơn?
+		Game đang sử dụng Rigidbody2D để xử lý vật lý.
+		Để tăng khả năng lăn của quả:
+			Tạo và áp dụng Physics Material 2D điều chỉnh các thuộc tính phù hợp như Friction hay Bounciness
+			Có thể chỉnh thông số Angular Drag của Rigidbody2D để quả dễ xoay hơn
+		Làm thế nào để các quả khi thả tạo tác động mạnh hơn lên các quả khác?
+			Thêm lực khi thả xuống 
+			Tăng tốc độ rơi 
+			Tăng khối lượng của quả
+			Giảm Linear Drag trong Rigidbody2D
+
+2. 	Tình huống: bạn được nhận một dự án do 1 dev khác chuyển giao qua. Bạn phát hiện khi chạy trên editor thì nhân vật di chuyển rất nhanh. Nhưng khi chạy trên device thì nhân vật lại di chuyển rất chậm. Bạn có phỏng đoán như thế nào về tình huống này, cách khắc phục là gì?
+		Phỏng đoán: 
+			Về việc sử dụng Time.deltaTime
+			Sự chênh lệch hiệu suất giữa thiết bị 
+		Cách khắc phục
+			Sử dụng Time.deltaTime
+			Tạo các thiết lập riêng 
+			#if UNITY_EDITOR 
+				moveSpeed = editorSpeed;
+ 			#else 
+				moveSpeed = deviceSpeed; 
+			#endif
+5.	Một game phòng thủ tháp cần lập trình cho cung thủ đứng trên tháp luôn luôn bắn trúng địch trong tầm bắn.
+	Địch thì di chuyển theo một quỹ đạo ngẫu nhiên
+	Mũi tên thì di chuyển tuân theo trọng lực.
+	Hỏi có cách nào lập trình mũi tên di chuyển đảm bảo tất cả yêu cầu trên không? nếu có thì cách đó là gì?
+	Nếu không có thì có cách nào gần thoả mãn các yêu cầu nói trên nhất?
+
+		Không thể đảm bảo 100% luôn bắn trúng nếu địch di chuyển hoàn toàn ngẫu nhiên và không thể dự đoán
+		Giải pháp:
+			Trước khi bắn tính toán điểm mà địch có thể đi tới
+			Tăng tốc độ mũi tên 
+			Tăng kích thước vùng va chạm của mũi tên
+			Trong quá trình mũi tên di chuyển có thể điều chỉnh 1 chút quỹ đạo của mũi tên nhưng không làm mất tính tự nhiên của nó
+			
